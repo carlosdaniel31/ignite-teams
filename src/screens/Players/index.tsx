@@ -46,9 +46,7 @@ export function Players(){
       await playerAddByGroup(newPlayer, group)
       fetchPlayersByTeam()
       newPlayerNameInputRef.current?.blur()
-      setNewPlayerName("")
-      // const players = await playersGetByGroup(group)
-      // console.log(players);  
+      setNewPlayerName("") 
     } catch (error) {
       if(error instanceof AppError){
         Alert.alert("Nova Pessoa", error.message)
